@@ -1,0 +1,49 @@
+<Principal>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        md_bg_color: 0, 0.5, 0.8, 1
+        MDLabel:
+            text: "Cronômetro Speed"
+            halign: "center"
+            font_style: 'H5'
+            theme_text_color: "Custom"
+            text_color: '#331343'
+        MDLabel:
+            text: "Desenvolvido Claudio Lopes"
+            halign: "center"
+            font_style: 'Subtitle2'
+            theme_text_color: "Custom"
+            text_color: '#331343'
+        MDBoxLayout:
+            orientation: 'horizontal'
+            MDLabel:
+                text: root.cronoValueText
+                id: valor_cronometro
+                halign: "center"
+                font_style: 'H1'
+                theme_text_color: "Custom"
+                text_color: '#550080'
+        MDGridLayout:
+            cols: 2
+            spacing: 30
+            padding: [40,10]
+            Button:
+                id: btn_iniciar
+                on_press: root.iniciar()
+                text: "Iniciar"
+                background_color: '#00d300'
+            Button:
+                id: btn_parar
+                on_press: root.parar()
+                text: "Parar"
+                background_color: '#00d300'
+            Button:
+                id: btn_reiniciar
+                on_press: root.reiniciar()
+                text: "Reiniciar"
+                background_color: '#00d300'
+            Button:
+                id: btn_zerar
+                on_press: root.zerar()
+                text: "Zerar"
+                background_color:'#d30000'
